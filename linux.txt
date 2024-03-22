@@ -1,0 +1,97 @@
+#!/bin/bash
+
+echo "Enter a number: "
+read num
+
+if [ $num -gt 0 ]; then
+    echo "Number is positive"
+elif [ $num -lt 0 ]; then
+    echo "Number is negative"
+else
+    echo "Number is zero"
+fi
+
+
+	
+...
+#!/bin/bash
+
+echo "Counting from 1 to 5:"
+for i in {1..5}; do
+    echo $i
+done
+...
+#!/bin/bash
+
+echo "Enter a number: "
+read num
+
+echo "Counting from 1 to $num:"
+counter=1
+while [ $counter -le $num ]; do
+    echo $counter
+    ((counter++))
+done
+...
+#!/bin/bash
+
+echo "Enter your choice: "
+read choice
+
+case $choice in
+    1)
+        echo "You chose option 1";;
+    2)
+        echo "You chose option 2";;
+    3)
+        echo "You chose option 3";;
+    *)
+        echo "Invalid choice";;
+esac
+#!/bin/bash
+
+echo "Enter your choice: "
+read choice
+
+case $choice in
+    1)
+        echo "You chose option 1";;
+    2)
+        echo "You chose option 2";;
+    3)
+        echo "You chose option 3";;
+    *)
+        echo "Invalid choice";;
+esac
+...
+# Read a file and display its content
+cat filename.txt
+
+# Redirect output to a file (overwrite)
+echo "Hello" > output.txt
+
+# Redirect output to a file (append)
+echo "World" >> output.txt
+
+# Redirect input from a file
+wc -l < input.txt
+
+# Change file permissions
+chmod +x script.sh   # Add execute permission
+chmod 755 file.txt   # Set specific permissions
+...
+#!/bin/bash
+
+echo "Enter directory name: "
+read dirname
+
+mkdir $dirname
+...
+# Open a file in vi
+vi filename.txt
+
+# Inside vi:
+# Press 'i' to enter insert mode
+# Write your text
+# Press 'Esc' to exit insert mode
+# Type ':wq' to save and quit
